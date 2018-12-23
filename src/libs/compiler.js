@@ -59,7 +59,7 @@ export default class {
       case 'link':
         if (node.children.filter((_) => _.type === 'image').length) {
           result += node.children.map((n) => {
-            if (n.type === 'image') return `[${n.url} ${node.url}]`
+            if (n.type === 'image') return `[${n.url}]`
             return `[${this.compile(n, context)} ${node.url}]`
           }).join('')
         } else {
